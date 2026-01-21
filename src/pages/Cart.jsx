@@ -4,14 +4,14 @@ import { Trash2, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
-  // Pobieramy też formatPrice do złotówek
+  
   const { cart, removeFromCart, cartTotal, formatPrice } = useShop();
 
   if (cart.length === 0) {
     return (
       <div className="container" style={{ textAlign: 'center', padding: '100px 20px' }}>
         <h2>Twój koszyk jest pusty 😔</h2>
-        <p style={{ margin: '20px 0', color: '#64748b' }}>Wygląda na to, że nic jeszcze nie dodałaś.</p>
+        <p style={{ margin: '20px 0', color: '#64748b' }}>Wygląda na to, że nic jeszcze nie dodałeś.</p>
         <Link to="/" className="btn-add" style={{ display: 'inline-flex', textDecoration: 'none', justifyContent: 'center' }}>
           Wróć do sklepu
         </Link>
@@ -27,7 +27,7 @@ const Cart = () => {
         {/* LEWA KOLUMNA: Lista produktów */}
         <div className="cart-items">
           {cart.map((item, index) => (
-            // Używamy indexu jako klucza, bo możemy mieć ten sam produkt w różnych rozmiarach
+            
             <div key={`${item.id}-${item.selectedSize}-${index}`} className="cart-item">
               <div className="cart-img-wrapper">
                 <img src={item.image} alt={item.title} />
@@ -55,7 +55,7 @@ const Cart = () => {
                   </span>
                   
                   <button 
-                    // 👇 TU BYŁ BŁĄD: Teraz usuwamy konkretny produkt w konkretnym rozmiarze
+                   
                     onClick={() => removeFromCart(item.id, item.selectedSize)}
                     style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#ef4444', marginTop: '10px', display: 'flex', alignItems: 'center', gap: '5px' }}
                   >
@@ -101,5 +101,6 @@ const Cart = () => {
     </div>
   );
 };
+
 
 export default Cart;
