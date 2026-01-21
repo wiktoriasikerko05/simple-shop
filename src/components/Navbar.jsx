@@ -11,7 +11,7 @@ const Navbar = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      navigate(`/search?q=${searchQuery}`); // Przekieruj do wyników
+      navigate(`/search?q=${searchQuery}`); 
       setSearchQuery(''); // Wyczyść pole
     }
   };
@@ -79,5 +79,6 @@ const Navbar = () => {
     </>
   );
 };
+
 
 export default Navbar;
