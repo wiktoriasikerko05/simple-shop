@@ -3,8 +3,8 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Contact from './pages/Contact';
-import Favorites from './pages/Favorites'; // Nowość
-import SearchResults from './pages/SearchResults'; // Nowość
+import Favorites from './pages/Favorites'; 
+import SearchResults from './pages/SearchResults'; 
 
 function App() {
   return (
