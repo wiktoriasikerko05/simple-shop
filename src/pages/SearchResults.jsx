@@ -4,7 +4,7 @@ import ProductCard from '../components/ProductCard';
 
 const SearchResults = () => {
   const [searchParams] = useSearchParams();
-  const query = searchParams.get('q') || ''; // Pobieramy to co wpisałaś (np. "jacket")
+  const query = searchParams.get('q') || ''; 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -39,5 +39,6 @@ const SearchResults = () => {
     </div>
   );
 };
+
 
 export default SearchResults;
