@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ProductCard from '../components/ProductCard'; // <--- Importujemy gotowca
+import ProductCard from '../components/ProductCard'; 
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -44,5 +44,6 @@ const Home = () => {
     </div>
   );
 };
+
 
 export default Home;
