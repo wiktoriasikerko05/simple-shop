@@ -1,16 +1,43 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Aplikacja sklepu internetowego zbudowana w oparciu o React.js. Projekt symuluje pełny proces zakupowy: od przeglądania produktów, przez filtrowanie i wybór wariantów, aż po zarządzanie koszykiem.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+Główne Funkcjonalności:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Przeglądanie Produktów: Pobieranie danych z zewnętrznego API (FakeStoreAPI).
+System Kategorii: Dynamiczne filtrowanie produktów (Damskie, Męskie, Elektronika, Biżuteria).
+Zaawansowany Koszyk:
+    * Obsługa wariantów produktów (rozmiary XS-XL).
+    * Grupowanie tych samych produktów.
+    * Dynamiczne przeliczanie sumy zamówienia.
+Wyszukiwarka: Filtrowanie produktów w czasie rzeczywistym.
+Lista Życzeń (Ulubione): Możliwość zapisywania produktów na później.
 
-## Expanding the ESLint configuration
+Tech Stack (Technologie)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Core: React 18, Vite
+Routing: React Router DOM v6
+State Management: Context API (Globalny stan koszyka i ulubionych)
+Styling: CSS3 (Custom Properties, Flexbox, CSS Grid)
+Icons: Lucide React
+Deployment: Vercel
+
+Instalacja i Uruchomienie
+
+Aby uruchomić projekt lokalnie:
+
+1.  **Sklonuj repozytorium:**
+    ```bash
+    git clone [https://github.com/wiktoriasikerko05/modern-shop.git](https://github.com/wiktoriasikerko05/modern-shop.git)
+    ```
+
+2.  **Zainstaluj zależności:**
+    ```bash
+    npm install
+    ```
+
+3.  **Uruchom serwer deweloperski:**
+    ```bash
+    npm run dev
+    ```
